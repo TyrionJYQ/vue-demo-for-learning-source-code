@@ -5,6 +5,13 @@ import {createElement} from './utils/utils'
 
 createElement('div')
 
+// new Vue({
+//     el: '#app',
+//    render: h => h(Hello)
+// })
+// .$mount('#app')
+
 new Vue({
-   render: h => h(Hello)
-}).$mount('#app')
+    el: '#app',
+    tempalate: '#root'
+})

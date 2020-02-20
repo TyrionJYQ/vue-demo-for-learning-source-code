@@ -12,7 +12,7 @@ module.exports = {
     resolve: {
         // 设置别名
         alias: {
-            'vue': path.resolve('node_modules/vue/dist/vue.runtime.esm.js'),
+            'vue': path.resolve('node_modules/vue/dist/vue.js'),
         }
     },
     module:{
