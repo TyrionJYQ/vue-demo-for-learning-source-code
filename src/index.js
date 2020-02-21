@@ -1,17 +1,33 @@
 import Vue from 'vue'
 import Hello from './components/hello.vue'
-import {createElement} from './utils/utils'
+import App from '@components/App.vue'
+import { createElement } from './utils/utils'
 
 
 createElement('div')
 
-// new Vue({
-//     el: '#app',
-//    render: h => h(Hello)
-// })
-// .$mount('#app')
+/*********************************************for source code analysis 05 start**********************************************************************/
 
+// new Vue({
+//     render(h) {
+//         return h('h1', { class: 'p' }, [this.msg, h('span', [h('a', 'baidu'), h('a', 'gg')])])
+//     },
+//     data() {
+//         return {
+//             msg: 'hello'
+//         }
+//     }
+// }).$mount('#app')
+
+/*********************************************for source code analysis 05 end**********************************************************************/
+
+
+/*********************************************for source code analysis 06 start**********************************************************************/
 new Vue({
     el: '#app',
-    tempalate: '#root'
+    render(h) {
+        return h(App)
+    }
 })
+
+/*********************************************for source code analysis 06 end**********************************************************************/
