@@ -1,18 +1,17 @@
 <template>
     <div>
-       <ca/>
-       <cb/>
+       <SubComp/>
     </div>
 </template>
 
 <script >
 import CompA from '@components/CompA.vue'
 import CompB from '@components/CompB.vue'
+import SubComp from '@components/SubComp.vue'
 export default {
     name: 'comp',
     components: {
-        ca:CompA,
-        cb:CompB
+        SubComp
     }
    
 }

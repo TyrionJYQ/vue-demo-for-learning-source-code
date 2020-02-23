@@ -9,6 +9,11 @@ module.exports = {
         app: './src/index.js',
         
     },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve('./dist'),
+       
+    },
     resolve: {
         // 设置别名
         alias: {
@@ -29,10 +34,10 @@ module.exports = {
            
         ]
     },
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
-    },
+    // devtool: 'inline-source-map',
+    // devServer: {
+    //     contentBase: './dist',
+    // },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({

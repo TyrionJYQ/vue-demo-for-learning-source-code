@@ -2,7 +2,7 @@
     <div id="app">
         <div>1</div>
         <div>2</div>
-        <div>3<span>{{msg}}</span></div>
+        <div>3</div>
     </div>
 </template>
 
@@ -21,7 +21,9 @@ export default {
     },
     data() {
         return {
-            msg: 'hello'
+            foo: 'foo',
+            bar: 'bar',
+            other: 'other'
         }
     },
    

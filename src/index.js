@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Hello from './components/hello.vue'
 import App from '@components/App.vue'
+import SubComp from '@components/SubComp.vue'
 import { createElement } from './utils/utils'
 
 
-createElement('div')
+// createElement('div')
 
 /*********************************************for source code analysis 05 start**********************************************************************/
 
 // new Vue({
 //     render(h) {
-//         return h('h1', { class: 'p' }, [this.msg, h('span', [h('a', 'baidu'), h('a', 'gg')])])
+//         return h('h1', { class: 'p' }, [this.msg, h('span', [h('a', 'game'), h('a', 'over')])])
 //     },
 //     data() {
 //         return {
@@ -23,11 +24,23 @@ createElement('div')
 
 
 /*********************************************for source code analysis 06 start**********************************************************************/
-new Vue({
-    el: '#app',
-    render(h) {
-        return h(App)
-    }
-})
+// new Vue({
+//     el: '#app',
+//    data() {
+//        return {
+//         foo: 'foo',
+//         bar: 'bar',
+//         other: 'other'
+//        }
+//    }
+// })
 
 /*********************************************for source code analysis 06 end**********************************************************************/
+
+
+new Vue({
+    el: '#app',
+    render(h){
+        return h(SubComp)
+    }
+})
