@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import Hello from './components/hello.vue'
-import App from '@components/App.vue'
-import SubComp from '@components/SubComp.vue'
-import { createElement } from './utils/utils'
+// import Hello from './components/hello.vue'
+// import App from '@components/App.vue'
+// import SubComp from '@components/SubComp.vue'
+// import { createElement } from './utils/utils'
+import AppForMergeOptionsTest from '@components/AppForMergeOptionsTest.vue'
 
 
 // createElement('div')
@@ -38,9 +39,23 @@ import { createElement } from './utils/utils'
 /*********************************************for source code analysis 06 end**********************************************************************/
 
 
+// new Vue({
+//     el: '#app',
+//     render(h){
+//         return h(SubComp)
+//     }
+// })
+Vue.mixin({
+    created() {
+        console.log('parent created')
+    }
+}).mixin({
+    testMixIn: 'testMixin'
+})
+
 new Vue({
     el: '#app',
-    render(h){
-        return h(SubComp)
+    render(h) {
+        return h(AppForMergeOptionsTest)
     }
 })
