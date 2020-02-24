@@ -3,7 +3,8 @@ import Vue from 'vue'
 // import App from '@components/App.vue'
 // import SubComp from '@components/SubComp.vue'
 // import { createElement } from './utils/utils'
-import AppForMergeOptionsTest from '@components/AppForMergeOptionsTest.vue'
+// import AppForMergeOptionsTest from '@components/AppForMergeOptionsTest.vue'
+import Lifecycle from '@components/Lifecycle.vue'
 
 
 // createElement('div')
@@ -45,17 +46,18 @@ import AppForMergeOptionsTest from '@components/AppForMergeOptionsTest.vue'
 //         return h(SubComp)
 //     }
 // })
-Vue.mixin({
-    created() {
-        console.log('parent created')
-    }
-}).mixin({
-    testMixIn: 'testMixin'
-})
+// Vue.mixin({
+//     created() {
+//         console.log('parent created')
+//     }
+// }).mixin({
+//     testMixIn: 'testMixin'
+// })
+
 
 new Vue({
     el: '#app',
     render(h) {
-        return h(AppForMergeOptionsTest)
+        return h(Lifecycle)
     }
 })
