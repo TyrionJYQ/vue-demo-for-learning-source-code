@@ -5,6 +5,7 @@ import Vue from 'vue'
 // import { createElement } from './utils/utils'
 // import AppForMergeOptionsTest from '@components/AppForMergeOptionsTest.vue'
 import Lifecycle from '@components/Lifecycle.vue'
+import AsyncComp from '@components/AsyncComp.vue'
 
 
 // createElement('div')
@@ -58,6 +59,12 @@ import Lifecycle from '@components/Lifecycle.vue'
 new Vue({
     el: '#app',
     render(h) {
-        return h(Lifecycle)
+        return h(AsyncComp)
     }
 })
+import('@js/data.js').then(data => console.log(data))
+async function getO() {
+    let o = await( import('@js/data.js'))
+    console.log(o.foo)
+}
+getO()

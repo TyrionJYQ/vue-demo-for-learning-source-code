@@ -18,7 +18,8 @@ module.exports = {
         // 设置别名
         alias: {
             'vue': path.resolve('node_modules/vue/dist/vue.runtime.esm.js'),
-            '@components': path.resolve('./src/components')
+            '@components': path.resolve('./src/components'),
+            '@js':path.resolve('./src/js')
         }
     },
     module:{
