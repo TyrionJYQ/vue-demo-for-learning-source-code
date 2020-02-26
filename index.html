@@ -13,4 +13,18 @@
 </body>
 <script src="./dist/0.bundle.js"></script>
 <script src="./dist/app.bundle.js"></script>
+<script>
+var vm = {
+	foo: function foo() {
+    console.log(foo)
+    }
+};
+
+function bar() {
+	return function t(vm.foo()) {
+		console.log('bar')
+	}
+
+} 
+</script>
 </html>

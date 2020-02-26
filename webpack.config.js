@@ -36,9 +36,10 @@ module.exports = {
         ]
     },
     // devtool: 'inline-source-map',
-    // devServer: {
-    //     contentBase: './dist',
-    // },
+    devServer: {
+        contentBase: './dist',
+        host:'192.168.1.105'
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
