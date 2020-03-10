@@ -16,6 +16,8 @@
 
 [vue源码分析（二）vue运行时版本和带编译的版本区别](https://blog.csdn.net/TyrionJ/article/details/104393552)
 
+[vue源码分析(三) new Vue背后的故事](https://blog.csdn.net/TyrionJ/article/details/104398902)
+
 
 
 ### Vue构造函数
