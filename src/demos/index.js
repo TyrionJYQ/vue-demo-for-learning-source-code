@@ -6,7 +6,12 @@ new Vue({
  template:document.querySelector('#app'),
  data() {
    return {
-     msg: 'hello'
+     _msg: 'hello'
+   }
+ },
+ methods: {
+   onChange(e) {
+     this.msg = e.target.value
    }
  }
 }).$mount('#app')

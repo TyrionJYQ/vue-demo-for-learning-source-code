@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="app">
-    <div>{{msg}}</div>
+    <input type="text" @change="onChange($event)" :value="Number.parseInt($data._msg)">
   </div>
 </body>
 </html>
