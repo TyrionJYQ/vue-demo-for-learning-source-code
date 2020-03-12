@@ -126,3 +126,9 @@ export function query (el: string | Element): Element {
 在`mountComponent` 方法中或调用`_render` 方法生`vnode` 
 
 参考[vue源码分析(四) 深入源码了解Vue实例的挂载](https://blog.csdn.net/TyrionJ/article/details/104401882)
+
+
+
+#### createElement
+
+![avator](https://github.com/TyrionJYQ/vue-demo-for-learning-source-code/blob/master/flowcharts/createElement.svg)
