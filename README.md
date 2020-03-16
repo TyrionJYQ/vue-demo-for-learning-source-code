@@ -161,7 +161,69 @@ export function query (el: string | Element): Element {
 > 在`vue`中根据`vnode.elm`创建真实的`dom`,调用`insert`方法将`vnode.elm`插入到父节点上
 
 
+
 > vnode如果没有tag,则可能是一个注释节点或者文本节点，直接插入到父元素	
 
 在`update` 方法中,调用patch方法创建`dom`,首先创建虚拟`dom`所对应的真实 `dom`，然后遍历`childen`，将`children`插入到父`vnode`所对应的真实`dom`。
 
+
+
+
+
+### createComponet
+
+创建组件vnode
+
+```javascript
+// App.vue
+<template>
+  <div id="app">
+    {{msg}}
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'app',
+  data() {
+    return {
+      msg: 'hello vue'
+    }
+  }
+}
+</script>
+
+<style></style>
+
+// app.js
+import Vue from 'vue'
+import App from './App.vue'
+console.log(App)
+new Vue({
+  el: '#app',
+  render(h) {
+    return h(App)
+  }
+})
+```
+
+
+
+**关于组件的渲染重点需要弄清以下几个重点**
+
+* vm._vnode
+
+* vm.$vnode
+
+* vm.$children
+
+* vm.$parent
+
+* 组件间的父子关系是如何建立的
+
+* 
+  vue组件在初始化过程中安装了哪些钩子函数，以及钩子函数的作用
+
+  ​
+
+  ​
