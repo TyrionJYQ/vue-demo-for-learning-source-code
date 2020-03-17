@@ -211,18 +211,25 @@ new Vue({
 
 **关于组件的渲染重点需要弄清以下几个重点**
 
-* vm._vnode
+* vm._vnode:渲染vnode，将render生成的vnode作为vm的_vnode，也就是要渲染成dom的vnode
 
-* vm.$vnode
+  ```
+  Vue.prototype._update = function(vnode) {
+    vm._vnode = vnode
+  }
+  ```
 
-* vm.$children
+  ​
 
-* vm.$parent
+* vm.$vnode: 父vnde
+
+* vm.$children:子组件
+
+* vm.$parent: 父实例或者父组件
 
 * 组件间的父子关系是如何建立的
 
-* 
-  vue组件在初始化过程中安装了哪些钩子函数，以及钩子函数的作用
+* vue在生成组件vnode的过程中会安装钩子函数，其中hook包括init函数
 
   ​
 
