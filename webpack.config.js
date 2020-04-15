@@ -6,8 +6,8 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    demo01: './src/demos/demoForComponentPatch.js',
-
+    // demo01: './src/demos/demoForComponentPatch.js',
+    asyncComp: './src/demos/index.js'
   },
   output: {
     filename: '[name].bundle.js',
